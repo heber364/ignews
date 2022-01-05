@@ -1,8 +1,9 @@
 .contentContainer{
     max-width: 1120px;
-    margin: 0 auto;
+    margin: 5rem auto 0 auto;
     padding: 0 2rem;
     height: calc(100vh - 5rem);
+    min-height: 650px;
     
     display: flex;
     align-items: center;
@@ -44,4 +45,49 @@
         margin-top: 2.5rem;
     }
 
+}
+@media screen and(max-width:767px){
+    .contentContainer{
+        flex-direction: column;
+        margin-top: calc(5rem + 1px);
+        padding: 5rem 1.5rem;
+
+        
+        .hero{
+            align-items: center;
+            text-align: center;
+            max-width: 600px;
+
+            > span{
+                font-size: 1.75rem;
+                font-weight: 400;
+
+            }
+
+            h1{
+
+                font-size: 4rem;
+                line-height: 4.25rem;
+
+
+
+            }
+            p{
+                font-size: 1.25rem;
+                margin-top: 2.75rem;
+            }
+
+            button{          
+                margin: 2.5rem auto;
+                border-radius: 1.5rem;
+                font-size: 1.55rem;
+            }
+        }
+
+        img{
+            padding: 5rem 2rem;
+          
+        }
+    
+    } 
 }
