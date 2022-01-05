@@ -3,7 +3,12 @@ import { VscMenu , VscClose} from 'react-icons/vsc'
 import styles from './styles.module.scss'
 import { useState } from 'react'
 
+
+import { ActiveLink } from '../ActiveLink'
+
+
 export function Header() {
+
 
 	const [idNavMenu, setIdNavMenu] = useState('nav-menu')
 
@@ -21,8 +26,13 @@ export function Header() {
 				<img src="/images/logo.svg" alt="ig.news" />
 					<div className={styles.menuContent} id={idNavMenu}>
 						<nav>
-							<a className={styles.active} href="#" onClick={handleCloseToggle}>Home</a>
-							<a href="#" onClick={handleCloseToggle}>Posts</a>
+							<ActiveLink activeClassName={styles.active} href='/'>
+								<a onClick={handleCloseToggle}>Home</a>
+							</ActiveLink>
+							<ActiveLink activeClassName={styles.active} href='/posts' prefetch> 
+								<a onClick={handleCloseToggle}>Posts</a>
+							</ActiveLink>
+							
 							<SignInButton />
 						</nav>
 						
